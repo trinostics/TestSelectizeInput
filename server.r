@@ -26,4 +26,6 @@ shinyServer(function(input, output, session) {
     rval$df <- cbind(rval$df, count1 = 100, count2 = 200)
   })
   
+  output$table <- renderTable(rval$df)
+  
 })
